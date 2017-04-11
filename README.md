@@ -8,6 +8,8 @@ Screens
 
 ----------------------------------------------------
 
-![alt text](https://github.com/aniov/QrCode/blob/master/src/screens/QRCode-pic.png "Screen one")
+![alt text](https://github.com/aniov/QrCode/blob/master/screens/QRCode-pic.png "Screen one")
+
+
 
 
