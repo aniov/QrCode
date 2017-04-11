@@ -27,6 +27,7 @@ public class MainController {
     public String setHome(@RequestParam(name = "qrText", defaultValue = " ") String qrText) {
 
         httpSession.setAttribute("input", qrText);
+
         return "home";
     }
 

@@ -19,6 +19,9 @@ import java.io.IOException;
 public class QRCreator {
 
     private QRCodeWriter qrCodeWriter;
+    private final int width = 400;
+    private final int height = width;
+    private final String imageType = "jpg";
 
     public QRCreator() {
         qrCodeWriter = new QRCodeWriter();
@@ -29,7 +32,7 @@ public class QRCreator {
         BitMatrix bitMatrix = null;
 
         try {
-            bitMatrix = qrCodeWriter.encode(toEncode, BarcodeFormat.QR_CODE, 400, 400);
+            bitMatrix = qrCodeWriter.encode(toEncode, BarcodeFormat.QR_CODE, width, height);
         } catch (WriterException e) {
             e.printStackTrace();
         }
@@ -53,7 +56,7 @@ public class QRCreator {
         ByteArrayOutputStream imageAsByte = new ByteArrayOutputStream();
 
         try {
-            ImageIO.write(image, "jpg", imageAsByte);
+            ImageIO.write(image, imageType, imageAsByte);
         } catch (IOException e) {
             e.printStackTrace();
         }
